@@ -95,9 +95,19 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1500&color=00D4FF&center=true&vCenter=true&width=700&lines=Live+Demo+%7C+Graph+%2B+ML+%2B+Quantum+%7C+2-3+min" alt="Typing SVG" /></a>
 
+<br/><br/>
+
+### 🎥 Pipeline Explainer (Manim Animation)
+
+https://github.com/user-attachments/assets/MulingNetExplainer.mp4
+
+<video src="./assets/MulingNetExplainer.mp4" width="100%" controls autoplay muted loop>
+  Your browser does not support the video tag.
+</video>
+
 <br/>
 
-> **📺 Watch the demo video on LinkedIn** — [LinkedIn Post Link](#)  
+> **📺 Watch the full demo video on LinkedIn** — [LinkedIn Post Link](#)  
 > *2-3 min walkthrough covering architecture, detection pipeline, and live demo.*  
 > *#RIFTHackathon #MoneyMulingDetection #FinancialCrime*
 
@@ -169,7 +179,7 @@
 
 <div align="center">
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1500&color=A371F7&center=true&vCenter=true&width=700&lines=8-Step+Detection+Pipeline+%7C+CSV+→+Graph+→+ML+→+Quantum+→+Report" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1500&color=A371F7&center=true&vCenter=true&width=700&lines=8-Step+Detection+Pipeline+%7C+CSV+%E2%86%92+Graph+%E2%86%92+ML+%E2%86%92+Quantum+%E2%86%92+Report" alt="Typing SVG" /></a>
 
 <br/><br/>
 
@@ -207,7 +217,7 @@
 
 <div align="center">
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1500&color=3FB950&center=true&vCenter=true&width=700&lines=End-to-End+Data+Flow+%7C+CSV+→+Multi-Agent+Scoring+→+9-Tab+Dashboard" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1500&color=3FB950&center=true&vCenter=true&width=700&lines=End-to-End+Data+Flow+%7C+CSV+%E2%86%92+Multi-Agent+Scoring+%E2%86%92+9-Tab+Dashboard" alt="Typing SVG" /></a>
 
 <br/><br/>
 
@@ -731,7 +741,7 @@ rift/
 
 <div align="center">
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Get+Running+in+3+Steps+%F0%9F%9A%80;Backend+→+Frontend+→+Analyze!" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Get+Running+in+3+Steps+%F0%9F%9A%80;Backend+%E2%86%92+Frontend+%E2%86%92+Analyze!" alt="Typing SVG" /></a>
 
 </div>
 
