@@ -99,7 +99,7 @@
 
 ### 🎥 Pipeline Explainer (Manim Animation)
 
-[https://github.com/user-attachments/assets/MulingNetExplainer.mp4](https://github.com/dhanasai2/MulingNet-AI/blob/main/assets/MulingNetExplainer.mp4)
+https://github.com/dhanasai2/MulingNet-AI/blob/main/assets/MulingNetExplainer.mp4
 
 <video src="./assets/MulingNetExplainer.mp4" width="100%" controls autoplay muted loop>
   Your browser does not support the video tag.
