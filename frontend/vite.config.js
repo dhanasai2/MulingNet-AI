@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://unheaved-elina-roughly.ngrok-free.dev/',
+        target: 'https://unheaved-elina-roughly.ngrok-free.dev',
         changeOrigin: true
       }
     }
