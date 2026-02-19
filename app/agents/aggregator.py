@@ -63,10 +63,18 @@ class AggregatorAgent:
         
         # ── Compute final suspicion scores ──
         suspicious_accounts = []
+        # Known legitimate account name prefixes (false positive control)
+        fp_prefixes = ("MERCHANT", "STORE", "SHOP", "VENDOR", "POS_", "PAYROLL", "SALARY")
+        
         for acc_id, data in account_data.items():
             g = data["graph_score"]
             m = data["ml_score"]
             q = data["quantum_score"]
+            
+            # False positive filter: skip known legitimate account types
+            acc_upper = str(acc_id).upper()
+            if any(acc_upper.startswith(prefix) for prefix in fp_prefixes):
+                continue
             
             # If quantum didn't analyze this account, redistribute weight
             if q == 0 and (g > 0 or m > 30):
