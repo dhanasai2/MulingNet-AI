@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 380" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#080b14"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/><stop offset="50%" stop-color="#fbbf24" stop-opacity="0.06"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1050" height="380" fill="url(#bg)" rx="14"/>
+  <rect width="60" height="380" fill="url(#scan)"><animate attributeName="x" values="-60;1050" dur="4s" repeatCount="indefinite"/></rect>
+
+  <text x="525" y="34" text-anchor="middle" fill="#c9d1d9" font-size="16" font-family="'Segoe UI',sans-serif" font-weight="800" letter-spacing="2">SCORING FORMULA &amp; CLASSIFICATION</text>
+  <rect x="310" y="42" width="430" height="1.5" rx="0.75" fill="#fbbf24" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></rect>
+
+  <!-- Formula Box -->
+  <g transform="translate(50,65)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.3s" fill="freeze"/>
+    <rect width="500" height="100" rx="12" fill="#0d1117" stroke="#fbbf24" stroke-width="2"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></rect>
+    <rect width="500" height="5" rx="2.5" fill="#fbbf24" opacity="0.5"/>
+    <text x="250" y="28" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="monospace" font-weight="800">WEIGHTED ENSEMBLE FORMULA</text>
+    <text x="250" y="55" text-anchor="middle" fill="#c9d1d9" font-size="14" font-family="monospace" font-weight="700">final_score = </text>
+    <text x="60" y="80" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="700">(0.40 x graph)</text>
+    <text x="215" y="80" fill="#c9d1d9" font-size="13" font-family="monospace"> + </text>
+    <text x="240" y="80" fill="#a371f7" font-size="13" font-family="monospace" font-weight="700">(0.35 x ml)</text>
+    <text x="370" y="80" fill="#c9d1d9" font-size="13" font-family="monospace"> + </text>
+    <text x="395" y="80" fill="#f97583" font-size="13" font-family="monospace" font-weight="700">(0.25 x quantum)</text>
+  </g>
+
+  <!-- Weight bars -->
+  <g transform="translate(600,65)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+    <rect width="400" height="100" rx="12" fill="#0d1117" stroke="#484f58" stroke-width="0.5"/>
+    <text x="200" y="22" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace" font-weight="700">WEIGHT DISTRIBUTION</text>
+    <!-- Graph bar -->
+    <rect x="20" y="35" width="360" height="14" rx="4" fill="#161b22"/>
+    <rect x="20" y="35" width="0" height="14" rx="4" fill="#58a6ff" opacity="0.7"><animate attributeName="width" values="0;144" dur="1s" begin="0.8s" fill="freeze"/></rect>
+    <text x="170" y="46" fill="#c9d1d9" font-size="8" font-family="monospace">Graph 40%</text>
+    <!-- ML bar -->
+    <rect x="20" y="55" width="360" height="14" rx="4" fill="#161b22"/>
+    <rect x="20" y="55" width="0" height="14" rx="4" fill="#a371f7" opacity="0.7"><animate attributeName="width" values="0;126" dur="1s" begin="1.0s" fill="freeze"/></rect>
+    <text x="150" y="66" fill="#c9d1d9" font-size="8" font-family="monospace">ML 35%</text>
+    <!-- Quantum bar -->
+    <rect x="20" y="75" width="360" height="14" rx="4" fill="#161b22"/>
+    <rect x="20" y="75" width="0" height="14" rx="4" fill="#f97583" opacity="0.7"><animate attributeName="width" values="0;90" dur="1s" begin="1.2s" fill="freeze"/></rect>
+    <text x="116" y="86" fill="#c9d1d9" font-size="8" font-family="monospace">Quantum 25%</text>
+  </g>
+
+  <!-- Classification Thresholds -->
+  <g transform="translate(50,190)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
+    <text x="0" y="15" fill="#c9d1d9" font-size="12" font-family="monospace" font-weight="800">CLASSIFICATION THRESHOLDS</text>
+  </g>
+
+  <!-- Confirmed Mule -->
+  <g transform="translate(50,215)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.8s" fill="freeze"/>
+    <rect width="300" height="60" rx="10" fill="#0d1117" stroke="#ef4444" stroke-width="2"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></rect>
+    <circle cx="30" cy="30" r="12" fill="#ef4444" opacity="0.2"/><circle cx="30" cy="30" r="6" fill="#ef4444"><animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/></circle>
+    <text x="55" y="26" fill="#ef4444" font-size="14" font-family="monospace" font-weight="900">CONFIRMED MULE</text>
+    <text x="55" y="46" fill="#8b949e" font-size="11" font-family="monospace">score &gt;= 60</text>
+  </g>
+
+  <!-- Suspicious -->
+  <g transform="translate(380,215)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.1s" fill="freeze"/>
+    <rect width="300" height="60" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="2"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.3s"/></rect>
+    <circle cx="30" cy="30" r="12" fill="#fbbf24" opacity="0.2"/><text x="30" y="35" text-anchor="middle" fill="#fbbf24" font-size="16">&#x26A0;</text>
+    <text x="55" y="26" fill="#fbbf24" font-size="14" font-family="monospace" font-weight="900">SUSPICIOUS</text>
+    <text x="55" y="46" fill="#8b949e" font-size="11" font-family="monospace">score &gt;= 25</text>
+  </g>
+
+  <!-- Clean -->
+  <g transform="translate(710,215)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.4s" fill="freeze"/>
+    <rect width="300" height="60" rx="10" fill="#0d1117" stroke="#3fb950" stroke-width="2"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.6s"/></rect>
+    <circle cx="30" cy="30" r="12" fill="#3fb950" opacity="0.2"/><text x="30" y="36" text-anchor="middle" fill="#3fb950" font-size="18">&#x2713;</text>
+    <text x="55" y="26" fill="#3fb950" font-size="14" font-family="monospace" font-weight="900">CLEAN</text>
+    <text x="55" y="46" fill="#8b949e" font-size="11" font-family="monospace">score &lt; 25</text>
+  </g>
+
+  <!-- Score scale visualization -->
+  <g transform="translate(50,300)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.7s" fill="freeze"/>
+    <rect width="950" height="50" rx="8" fill="#0d1117" stroke="#484f58" stroke-width="0.5"/>
+    <text x="475" y="16" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">SCORE RANGE 0-100</text>
+    <!-- Scale bar -->
+    <rect x="20" y="25" width="910" height="12" rx="6" fill="#161b22"/>
+    <!-- Green zone -->
+    <rect x="20" y="25" width="227" height="12" rx="6" fill="#3fb950" opacity="0.4"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/></rect>
+    <!-- Yellow zone -->
+    <rect x="247" y="25" width="320" height="12" fill="#fbbf24" opacity="0.3"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite" begin="0.5s"/></rect>
+    <!-- Red zone -->
+    <rect x="567" y="25" width="363" height="12" rx="6" fill="#ef4444" opacity="0.4"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1s"/></rect>
+    <!-- Threshold markers -->
+    <line x1="247" y1="22" x2="247" y2="40" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="247" y="48" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace">25</text>
+    <line x1="567" y1="22" x2="567" y2="40" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="567" y="48" text-anchor="middle" fill="#ef4444" font-size="8" font-family="monospace">60</text>
+    <text x="130" y="34" text-anchor="middle" fill="#3fb950" font-size="8" font-family="monospace" font-weight="700">CLEAN</text>
+    <text x="400" y="34" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace" font-weight="700">SUSPICIOUS</text>
+    <text x="750" y="34" text-anchor="middle" fill="#ef4444" font-size="8" font-family="monospace" font-weight="700">CONFIRMED MULE</text>
+    <!-- Animated score indicator -->
+    <circle r="5" fill="#c9d1d9" filter="url(#glow)"><animate attributeName="cx" values="20;930;20" dur="6s" repeatCount="indefinite"/><animate attributeName="cy" values="31;31;31" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.9;0.3" dur="6s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

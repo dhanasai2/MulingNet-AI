@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 380" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#080b14"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#58a6ff" stop-opacity="0"/><stop offset="50%" stop-color="#58a6ff" stop-opacity="0.06"/><stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1050" height="380" fill="url(#bg)" rx="14"/>
+  <rect width="60" height="380" fill="url(#scan)"><animate attributeName="x" values="-60;1050" dur="4s" repeatCount="indefinite"/></rect>
+
+  <text x="525" y="34" text-anchor="middle" fill="#c9d1d9" font-size="16" font-family="'Segoe UI',sans-serif" font-weight="800" letter-spacing="2">ARCHITECTURE LAYERS</text>
+  <rect x="360" y="42" width="330" height="1.5" rx="0.75" fill="#58a6ff" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></rect>
+
+  <!-- Layer 1: Presentation -->
+  <g transform="translate(30,60)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
+    <rect width="990" height="70" rx="10" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></rect>
+    <rect width="990" height="4" rx="2" fill="#3fb950" opacity="0.5"/>
+    <text x="20" y="28" fill="#3fb950" font-size="13" font-family="monospace" font-weight="800">PRESENTATION</text>
+    <text x="20" y="48" fill="#8b949e" font-size="9" font-family="monospace">9 interactive tabs  |  Graph view  |  Fraud ring table  |  Quantum results  |  Disruption  |  Crime Team  |  What-If  |  Agent charts  |  Accounts</text>
+    <rect x="780" y="14" width="195" height="24" rx="6" fill="#3fb950" opacity="0.08" stroke="#3fb950" stroke-width="0.5"/>
+    <text x="877" y="31" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace" font-weight="700">React 18 + Vite + Tailwind</text>
+    <text x="20" y="63" fill="#484f58" font-size="8" font-family="monospace">vis-network  |  Chart.js  |  Font Awesome  |  Dark theme UI</text>
+  </g>
+
+  <!-- Layer 2: API Gateway -->
+  <g transform="translate(30,140)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+    <rect width="990" height="70" rx="10" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" begin="0.3s"/></rect>
+    <rect width="990" height="4" rx="2" fill="#58a6ff" opacity="0.5"/>
+    <text x="20" y="28" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="800">API GATEWAY</text>
+    <text x="20" y="48" fill="#8b949e" font-size="9" font-family="monospace">/api/analyze  |  /api/download  |  /api/health  |  /api/whatif  |  /api/webhook/n8n</text>
+    <rect x="780" y="14" width="195" height="24" rx="6" fill="#58a6ff" opacity="0.08" stroke="#58a6ff" stroke-width="0.5"/>
+    <text x="877" y="31" text-anchor="middle" fill="#58a6ff" font-size="9" font-family="monospace" font-weight="700">FastAPI + Uvicorn + CORS</text>
+    <text x="20" y="63" fill="#484f58" font-size="8" font-family="monospace">StaticFiles serving  |  Multipart upload  |  JSON streaming</text>
+  </g>
+
+  <!-- Layer 3: Agent Pipeline -->
+  <g transform="translate(30,220)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.0s" fill="freeze"/>
+    <rect width="990" height="70" rx="10" fill="#0d1117" stroke="#a371f7" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" begin="0.6s"/></rect>
+    <rect width="990" height="4" rx="2" fill="#a371f7" opacity="0.5"/>
+    <text x="20" y="28" fill="#a371f7" font-size="13" font-family="monospace" font-weight="800">AGENT PIPELINE</text>
+    <text x="20" y="48" fill="#8b949e" font-size="9" font-family="monospace">Graph Agent  --&gt;  ML Agent  --&gt;  Quantum Agent  --&gt;  Aggregator  --&gt;  Disruption  --&gt;  Crime Team</text>
+    <rect x="780" y="14" width="195" height="24" rx="6" fill="#a371f7" opacity="0.08" stroke="#a371f7" stroke-width="0.5"/>
+    <text x="877" y="31" text-anchor="middle" fill="#a371f7" font-size="9" font-family="monospace" font-weight="700">Python 3.14 + Multi-Agent</text>
+    <text x="20" y="63" fill="#484f58" font-size="8" font-family="monospace">NetworkX  |  scikit-learn  |  Qiskit  |  Groq LLM</text>
+    <!-- Animated flow arrow inner -->
+    <circle r="3" fill="#a371f7" filter="url(#glow)"><animate attributeName="cx" values="140;850" dur="3s" repeatCount="indefinite"/><animate attributeName="cy" values="44;44" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Layer 4: Data & Compute -->
+  <g transform="translate(30,300)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.4s" fill="freeze"/>
+    <rect width="990" height="70" rx="10" fill="#0d1117" stroke="#f97583" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" begin="0.9s"/></rect>
+    <rect width="990" height="4" rx="2" fill="#f97583" opacity="0.5"/>
+    <text x="20" y="28" fill="#f97583" font-size="13" font-family="monospace" font-weight="800">DATA &amp; COMPUTE</text>
+    <text x="20" y="48" fill="#8b949e" font-size="9" font-family="monospace">NetworkX DiGraph  |  Pandas vectorized  |  scikit-learn dual ensemble  |  Qiskit Aer QAOA  |  Matplotlib</text>
+    <rect x="780" y="14" width="195" height="24" rx="6" fill="#f97583" opacity="0.08" stroke="#f97583" stroke-width="0.5"/>
+    <text x="877" y="31" text-anchor="middle" fill="#f97583" font-size="9" font-family="monospace" font-weight="700">SCC + PageRank + QAOA</text>
+    <text x="20" y="63" fill="#484f58" font-size="8" font-family="monospace">IsolationForest  |  RandomForest  |  Max-Cut  |  Circuit rendering</text>
+  </g>
+
+  <!-- Vertical connection lines between layers -->
+  <g opacity="0.15">
+    <line x1="525" y1="130" x2="525" y2="140" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="2s" repeatCount="indefinite"/></line>
+    <line x1="525" y1="210" x2="525" y2="220" stroke="#58a6ff" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="2s" repeatCount="indefinite" begin="0.5s"/></line>
+    <line x1="525" y1="290" x2="525" y2="300" stroke="#a371f7" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="2s" repeatCount="indefinite" begin="1s"/></line>
+  </g>
+</svg>

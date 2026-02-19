@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 720" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#080b14"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/><stop offset="50%" stop-color="#fbbf24" stop-opacity="0.03"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1050" height="720" fill="url(#bg)" rx="14"/>
+  <rect width="60" height="720" fill="url(#scan)"><animate attributeName="x" values="-60;1050" dur="4s" repeatCount="indefinite"/></rect>
+
+  <text x="525" y="34" text-anchor="middle" fill="#c9d1d9" font-size="16" font-family="'Segoe UI',sans-serif" font-weight="800" letter-spacing="2">PROJECT DIRECTORY TREE</text>
+  <rect x="320" y="42" width="410" height="1.5" rx="0.75" fill="#fbbf24" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></rect>
+
+  <!-- Tree Visualization -->
+  <g transform="translate(30,55)" font-family="monospace" font-size="9">
+    <!-- Root -->
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.2s" fill="freeze"/>
+      <text x="0" y="15" fill="#fbbf24" font-weight="800" font-size="12">rift/</text>
+    </g>
+
+    <!-- app/ folder -->
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.3s" fill="freeze"/>
+      <text x="15" y="38" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="45" y="38" fill="#fbbf24" font-weight="700">app/</text>
+      <text x="75" y="38" fill="#484f58" font-size="7">FastAPI application root</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.4s" fill="freeze"/>
+      <text x="35" y="57" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="65" y="57" fill="#3fb950">main.py</text>
+      <text x="260" y="57" fill="#484f58" font-size="7">FastAPI app - 8-step pipeline - API routes</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.45s" fill="freeze"/>
+      <text x="35" y="74" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="65" y="74" fill="#8b949e">__init__.py</text>
+    </g>
+    <!-- agents/ -->
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.5s" fill="freeze"/>
+      <text x="35" y="93" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="65" y="93" fill="#fbbf24" font-weight="700">agents/</text>
+      <text x="130" y="93" fill="#484f58" font-size="7">Detection engine agents</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.55s" fill="freeze"/>
+      <text x="55" y="112" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="112" fill="#58a6ff">graph_agent.py</text>
+      <text x="260" y="112" fill="#484f58" font-size="7">SCC cycles - smurfing - shell networks - PageRank</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.6s" fill="freeze"/>
+      <text x="55" y="129" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="129" fill="#a371f7">ml_agent.py</text>
+      <text x="260" y="129" fill="#484f58" font-size="7">25 features - IsolationForest + RandomForest</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.65s" fill="freeze"/>
+      <text x="55" y="146" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="146" fill="#a371f7">quantum_agent.py</text>
+      <text x="260" y="146" fill="#484f58" font-size="7">QAOA Max-Cut - Qiskit Aer - 8 qubits</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.7s" fill="freeze"/>
+      <text x="55" y="163" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="163" fill="#f97583">aggregator.py</text>
+      <text x="260" y="163" fill="#484f58" font-size="7">Weighted ensemble - 0.40G + 0.35M + 0.25Q</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.75s" fill="freeze"/>
+      <text x="55" y="180" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="180" fill="#f97583">disruption_engine.py</text>
+      <text x="260" y="180" fill="#484f58" font-size="7">Centrality - articulation - pair removal</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.8s" fill="freeze"/>
+      <text x="55" y="197" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="197" fill="#F472B6">crime_team.py</text>
+      <text x="260" y="197" fill="#484f58" font-size="7">4 LLM agents - Groq API - template fallback</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.85s" fill="freeze"/>
+      <text x="55" y="214" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="85" y="214" fill="#3fb950">whatif_simulator.py</text>
+      <text x="260" y="214" fill="#484f58" font-size="7">What-If node removal simulator</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.9s" fill="freeze"/>
+      <text x="55" y="231" fill="#58a6ff">&#x2514;&#x2500;&#x2500;</text><text x="85" y="231" fill="#3fb950">llm_provider.py</text>
+      <text x="260" y="231" fill="#484f58" font-size="7">Groq LLM integration layer</text>
+    </g>
+    <!-- utils/ -->
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.95s" fill="freeze"/>
+      <text x="35" y="250" fill="#58a6ff">&#x2514;&#x2500;&#x2500;</text><text x="65" y="250" fill="#fbbf24" font-weight="700">utils/</text>
+      <text x="55" y="267" fill="#58a6ff">&#x2514;&#x2500;&#x2500;</text><text x="85" y="267" fill="#3fb950">csv_parser.py</text>
+      <text x="260" y="267" fill="#484f58" font-size="7">Vectorized pandas parser - column validation</text>
+    </g>
+
+    <!-- frontend/ folder (right column) -->
+    <g transform="translate(520,0)">
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.0s" fill="freeze"/>
+        <text x="0" y="38" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="30" y="38" fill="#fbbf24" font-weight="700">frontend/</text>
+        <text x="105" y="38" fill="#484f58" font-size="7">React SPA</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.05s" fill="freeze"/>
+        <text x="20" y="57" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="50" y="57" fill="#fbbf24" font-weight="700">src/</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.1s" fill="freeze"/>
+        <text x="40" y="74" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="70" y="74" fill="#fbbf24">App.jsx</text>
+        <text x="170" y="74" fill="#484f58" font-size="7">Root component - tabs - state</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.15s" fill="freeze"/>
+        <text x="40" y="91" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="70" y="91" fill="#fbbf24">main.jsx</text>
+        <text x="170" y="91" fill="#484f58" font-size="7">React entry point</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.2s" fill="freeze"/>
+        <text x="40" y="108" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="70" y="108" fill="#58a6ff">index.css</text>
+        <text x="170" y="108" fill="#484f58" font-size="7">Tailwind + custom</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.25s" fill="freeze"/>
+        <text x="40" y="125" fill="#58a6ff">&#x2514;&#x2500;&#x2500;</text><text x="70" y="125" fill="#fbbf24" font-weight="700">components/</text>
+        <text x="170" y="125" fill="#484f58" font-size="7">UI components</text>
+      </g>
+      <!-- Components list -->
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.3s" fill="freeze"/>
+        <text x="60" y="142" fill="#58a6ff">&#x251C;</text><text x="75" y="142" fill="#fbbf24" font-size="8">GraphView.jsx</text><text x="195" y="142" fill="#484f58" font-size="6">vis-network graph</text>
+        <text x="60" y="157" fill="#58a6ff">&#x251C;</text><text x="75" y="157" fill="#f97583" font-size="8">RingsTable.jsx</text><text x="195" y="157" fill="#484f58" font-size="6">Sortable ring table</text>
+        <text x="60" y="172" fill="#58a6ff">&#x251C;</text><text x="75" y="172" fill="#a371f7" font-size="8">QuantumPanel.jsx</text><text x="195" y="172" fill="#484f58" font-size="6">Circuit + histograms</text>
+        <text x="60" y="187" fill="#58a6ff">&#x251C;</text><text x="75" y="187" fill="#fbbf24" font-size="8">DisruptionPanel.jsx</text><text x="195" y="187" fill="#484f58" font-size="6">Strategy view</text>
+        <text x="60" y="202" fill="#58a6ff">&#x251C;</text><text x="75" y="202" fill="#F472B6" font-size="8">CrimeTeamPanel.jsx</text><text x="195" y="202" fill="#484f58" font-size="6">LLM briefings</text>
+        <text x="60" y="217" fill="#58a6ff">&#x251C;</text><text x="75" y="217" fill="#3fb950" font-size="8">WhatIfSimulator.jsx</text><text x="195" y="217" fill="#484f58" font-size="6">Node removal impact</text>
+        <text x="60" y="232" fill="#58a6ff">&#x251C;</text><text x="75" y="232" fill="#58a6ff" font-size="8">AgentsChart.jsx</text><text x="195" y="232" fill="#484f58" font-size="6">Grouped bar scores</text>
+        <text x="60" y="247" fill="#58a6ff">&#x251C;</text><text x="75" y="247" fill="#a371f7" font-size="8">JsonOutputPanel.jsx</text><text x="195" y="247" fill="#484f58" font-size="6">JSON + export</text>
+        <text x="60" y="262" fill="#58a6ff">&#x251C;</text><text x="75" y="262" fill="#f97583" font-size="8">AccountsTable.jsx</text><text x="195" y="262" fill="#484f58" font-size="6">Account deep-dive</text>
+        <text x="60" y="277" fill="#58a6ff">&#x251C;</text><text x="75" y="277" fill="#3fb950" font-size="8">N8nPanel.jsx</text><text x="195" y="277" fill="#484f58" font-size="6">Webhook integration</text>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.4s" fill="freeze"/>
+        <text x="60" y="292" fill="#58a6ff">&#x251C;</text><text x="75" y="292" fill="#8b949e" font-size="8">Header / Footer / Pipeline</text>
+        <text x="60" y="307" fill="#58a6ff">&#x251C;</text><text x="75" y="307" fill="#8b949e" font-size="8">StatsGrid / TabNav</text>
+        <text x="60" y="322" fill="#58a6ff">&#x2514;</text><text x="75" y="322" fill="#8b949e" font-size="8">UploadSection.jsx</text><text x="195" y="322" fill="#484f58" font-size="6">CSV upload dropzone</text>
+      </g>
+      <!-- Other frontend files -->
+      <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.5s" fill="freeze"/>
+        <text x="20" y="345" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="50" y="345" fill="#8b949e" font-size="8">dist/</text>
+        <text x="100" y="345" fill="#484f58" font-size="6">Production build</text>
+        <text x="20" y="362" fill="#58a6ff">&#x251C;&#x2500;&#x2500;</text><text x="50" y="362" fill="#8b949e" font-size="8">package.json</text>
+        <text x="20" y="379" fill="#58a6ff">&#x2514;&#x2500;&#x2500;</text><text x="50" y="379" fill="#8b949e" font-size="8">vite.config.js</text>
+      </g>
+    </g>
+
+    <!-- Root level files -->
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.6s" fill="freeze"/>
+      <rect x="0" y="410" width="990" height="160" rx="10" fill="#0d1117" stroke="#484f58" stroke-width="0.5" opacity="0.5"/>
+      <text x="495" y="430" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace" font-weight="800">ROOT FILES</text>
+      <text x="30" y="455" fill="#fbbf24" font-size="8">assets/</text><text x="260" y="455" fill="#484f58" font-size="7">SVG diagrams for README</text>
+      <text x="30" y="472" fill="#8b949e" font-size="8">.gitignore</text>
+      <text x="30" y="489" fill="#3fb950" font-size="8">generate_test_data.py</text><text x="260" y="489" fill="#484f58" font-size="7">Test data generator script</text>
+      <text x="30" y="506" fill="#3fb950" font-size="8">test_data.csv</text><text x="260" y="506" fill="#484f58" font-size="7">Sample test transactions</text>
+      <text x="30" y="523" fill="#f97583" font-size="8">n8n_workflow.json</text><text x="260" y="523" fill="#484f58" font-size="7">Importable n8n workflow</text>
+      <text x="30" y="540" fill="#58a6ff" font-size="8">requirements.txt</text><text x="260" y="540" fill="#484f58" font-size="7">Python dependencies</text>
+      <text x="530" y="455" fill="#a371f7" font-size="8">Procfile</text><text x="730" y="455" fill="#484f58" font-size="7">Heroku/Railway deployment</text>
+      <text x="530" y="472" fill="#a371f7" font-size="8">render.yaml</text><text x="730" y="472" fill="#484f58" font-size="7">Render deployment config</text>
+      <text x="530" y="489" fill="#c9d1d9" font-size="8" font-weight="700">README.md</text><text x="730" y="489" fill="#484f58" font-size="7">Documentation (this file)</text>
+    </g>
+
+    <!-- Stats -->
+    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.0s" fill="freeze"/>
+      <rect x="0" y="585" width="990" height="45" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="1" opacity="0.5"/>
+      <text x="100" y="613" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="monospace" font-weight="800">8 agents</text>
+      <text x="280" y="613" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace" font-weight="800">16 components</text>
+      <text x="495" y="613" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace" font-weight="800">9 tabs</text>
+      <text x="700" y="613" text-anchor="middle" fill="#a371f7" font-size="10" font-family="monospace" font-weight="800">3 deployment configs</text>
+      <text x="900" y="613" text-anchor="middle" fill="#f97583" font-size="10" font-family="monospace" font-weight="800">1 n8n workflow</text>
+    </g>
+  </g>
+</svg>

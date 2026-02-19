@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 400" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#080b14"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow2"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#a371f7" stop-opacity="0"/><stop offset="50%" stop-color="#a371f7" stop-opacity="0.06"/><stop offset="100%" stop-color="#a371f7" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1050" height="400" fill="url(#bg)" rx="14"/>
+  <rect width="60" height="400" fill="url(#scan)"><animate attributeName="x" values="-60;1050" dur="4s" repeatCount="indefinite"/></rect>
+
+  <text x="525" y="34" text-anchor="middle" fill="#c9d1d9" font-size="16" font-family="'Segoe UI',sans-serif" font-weight="800" letter-spacing="2">DUAL-MODEL ENSEMBLE ARCHITECTURE</text>
+  <rect x="300" y="42" width="450" height="1.5" rx="0.75" fill="#a371f7" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></rect>
+
+  <!-- IsolationForest Box -->
+  <g transform="translate(30,60)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.3s" fill="freeze"/>
+    <rect width="440" height="200" rx="12" fill="#0d1117" stroke="#f97583" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></rect>
+    <rect width="440" height="5" rx="2.5" fill="#f97583" opacity="0.5"/>
+    <text x="220" y="30" text-anchor="middle" fill="#f97583" font-size="14" font-family="monospace" font-weight="800">MODEL 1: IsolationForest</text>
+    <text x="220" y="50" text-anchor="middle" fill="#484f58" font-size="10" font-family="monospace">Unsupervised Anomaly Detection</text>
+    <!-- Config parameters -->
+    <rect x="30" y="65" width="380" height="22" rx="4" fill="#f97583" opacity="0.06"/>
+    <text x="40" y="81" fill="#f97583" font-size="10" font-family="monospace">n_estimators = </text>
+    <text x="192" y="81" fill="#c9d1d9" font-size="10" font-family="monospace" font-weight="700">50</text>
+    <rect x="30" y="92" width="380" height="22" rx="4" fill="#f97583" opacity="0.04"/>
+    <text x="40" y="108" fill="#f97583" font-size="10" font-family="monospace">contamination = </text>
+    <text x="205" y="108" fill="#c9d1d9" font-size="10" font-family="monospace" font-weight="700">0.15</text>
+    <text x="260" y="108" fill="#484f58" font-size="9" font-family="monospace">(15% anomaly rate)</text>
+    <rect x="30" y="119" width="380" height="22" rx="4" fill="#f97583" opacity="0.06"/>
+    <text x="40" y="135" fill="#f97583" font-size="10" font-family="monospace">random_state = </text>
+    <text x="197" y="135" fill="#c9d1d9" font-size="10" font-family="monospace" font-weight="700">42</text>
+    <!-- Role description -->
+    <rect x="30" y="155" width="380" height="35" rx="6" fill="#f97583" opacity="0.05" stroke="#f97583" stroke-width="0.5"/>
+    <text x="220" y="175" text-anchor="middle" fill="#f97583" font-size="10" font-family="monospace" font-weight="700">Flags statistical outliers (unsupervised)</text>
+  </g>
+
+  <!-- RandomForest Box -->
+  <g transform="translate(510,60)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+    <rect width="510" height="200" rx="12" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" begin="0.3s"/></rect>
+    <rect width="510" height="5" rx="2.5" fill="#3fb950" opacity="0.5"/>
+    <text x="255" y="30" text-anchor="middle" fill="#3fb950" font-size="14" font-family="monospace" font-weight="800">MODEL 2: RandomForestClassifier</text>
+    <text x="255" y="50" text-anchor="middle" fill="#484f58" font-size="10" font-family="monospace">Supervised Classification</text>
+    <rect x="30" y="65" width="450" height="22" rx="4" fill="#3fb950" opacity="0.06"/>
+    <text x="40" y="81" fill="#3fb950" font-size="10" font-family="monospace">n_estimators = </text>
+    <text x="192" y="81" fill="#c9d1d9" font-size="10" font-family="monospace" font-weight="700">50</text>
+    <rect x="30" y="92" width="450" height="22" rx="4" fill="#3fb950" opacity="0.04"/>
+    <text x="40" y="108" fill="#3fb950" font-size="10" font-family="monospace">max_depth = </text>
+    <text x="172" y="108" fill="#c9d1d9" font-size="10" font-family="monospace" font-weight="700">8</text>
+    <text x="200" y="108" fill="#484f58" font-size="9" font-family="monospace">(prevent overfitting)</text>
+    <rect x="30" y="119" width="450" height="22" rx="4" fill="#3fb950" opacity="0.06"/>
+    <text x="40" y="135" fill="#3fb950" font-size="10" font-family="monospace">n_jobs = </text>
+    <text x="137" y="135" fill="#c9d1d9" font-size="10" font-family="monospace" font-weight="700">-1</text>
+    <text x="170" y="135" fill="#484f58" font-size="9" font-family="monospace">(parallel processing)</text>
+    <rect x="30" y="155" width="450" height="35" rx="6" fill="#3fb950" opacity="0.05" stroke="#3fb950" stroke-width="0.5"/>
+    <text x="255" y="175" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace" font-weight="700">Trained on pseudo-labels (IF + graph signals)</text>
+  </g>
+
+  <!-- Ensemble flow arrows -->
+  <line x1="250" y1="260" x2="430" y2="310" stroke="#f97583" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.4"/>
+  <line x1="765" y1="260" x2="590" y2="310" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.4"/>
+  <circle r="4" fill="#f97583" filter="url(#glow2)"><animate attributeName="cx" values="250;430" dur="2s" repeatCount="indefinite"/><animate attributeName="cy" values="260;310" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/></circle>
+  <circle r="4" fill="#3fb950" filter="url(#glow2)"><animate attributeName="cx" values="765;590" dur="2s" repeatCount="indefinite" begin="0.5s"/><animate attributeName="cy" values="260;310" dur="2s" repeatCount="indefinite" begin="0.5s"/><animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite" begin="0.5s"/></circle>
+
+  <!-- Ensemble output box -->
+  <g transform="translate(300,290)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
+    <rect width="450" height="80" rx="12" fill="#0d1117" stroke="#a371f7" stroke-width="2"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></rect>
+    <rect width="450" height="5" rx="2.5" fill="#a371f7" opacity="0.5"/>
+    <text x="225" y="30" text-anchor="middle" fill="#a371f7" font-size="13" font-family="monospace" font-weight="900">ENSEMBLE OUTPUT</text>
+    <text x="225" y="55" text-anchor="middle" fill="#c9d1d9" font-size="12" font-family="monospace">ml_score = (IF_score + RF_prob) x 50</text>
+    <rect x="80" y="63" width="290" height="5" rx="2.5" fill="#a371f7" opacity="0.3"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/></rect>
+  </g>
+</svg>
