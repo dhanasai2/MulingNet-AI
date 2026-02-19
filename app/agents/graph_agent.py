@@ -304,6 +304,11 @@ class GraphAgent:
         Heuristic to detect legitimate high-volume merchants.
         Merchants: receive from many, send to few; stable amounts; regular timing.
         """
+        # Name-based heuristic: accounts with MERCHANT/STORE/SHOP prefix
+        node_upper = node.upper()
+        if any(tag in node_upper for tag in ["MERCHANT", "STORE", "SHOP", "VENDOR", "POS_"]):
+            return True
+        
         data = self.G.nodes[node]
         in_deg = data.get("in_degree", 0)
         out_deg = data.get("out_degree", 0)
@@ -312,7 +317,7 @@ class GraphAgent:
             return False
         
         # Merchants receive from many but send to very few (refunds only)
-        if out_deg <= 3 and in_deg > 20:
+        if out_deg <= 3 and in_deg >= 15:
             return True
         
         # Check amount regularity: merchants have similar transaction amounts
@@ -324,8 +329,8 @@ class GraphAgent:
         
         if len(in_amounts) > 10:
             cv = np.std(in_amounts) / (np.mean(in_amounts) + 1e-9)
-            # Low coefficient of variation → regular payments → likely merchant
-            if cv < 0.3:
+            # Low-moderate coefficient of variation → regular payments → likely merchant
+            if cv < 0.5:
                 return True
         
         return False
