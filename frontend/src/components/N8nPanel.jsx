@@ -168,7 +168,7 @@ export default function N8nPanel({ summary }) {
         </p>
         <div className="flex items-center gap-2">
           <code className="flex-1 bg-dark-900 border border-dark-500 rounded-lg px-4 py-2.5 text-sm text-green-400 font-mono overflow-x-auto">
-            https://muling-net-ai.vercel.app/api/analyze
+            https://unheaved-elina-roughly.ngrok-free.dev/api/analyze
           </code>
           <button onClick={copyWebhook}
             className={`shrink-0 px-3 py-2.5 rounded-lg text-xs font-bold border transition-all ${
