@@ -4,12 +4,15 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    
+    port: 3000,
     proxy: {
       '/api': {
         target: 'https://unheaved-elina-roughly.ngrok-free.dev',
-        changeOrigin: true,
-        secure: false, 
+        changeOrigin: true
+      },
+      '/n8n_workflow.json': {
+        target: 'https://unheaved-elina-roughly.ngrok-free.dev',
+        changeOrigin: true
       }
     }
   },
