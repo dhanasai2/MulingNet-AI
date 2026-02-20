@@ -8,6 +8,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://unheaved-elina-roughly.ngrok-free.dev',
+        changeOrigin: true,
         secure: false, 
       }
     }
