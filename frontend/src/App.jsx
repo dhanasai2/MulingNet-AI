@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import API_BASE from './config'
 import Header from './components/Header'
 import UploadSection from './components/UploadSection'
 import Pipeline from './components/Pipeline'
@@ -50,7 +51,7 @@ export default function App() {
     formData.append('file', file)
 
     try {
-      const resp = await fetch('/api/analyze', { method: 'POST', body: formData })
+      const resp = await fetch(`${API_BASE}/api/analyze`, { method: 'POST', body: formData })
       if (!resp.ok) {
         const err = await resp.json()
         throw new Error(err.detail || 'Analysis failed')
@@ -73,7 +74,7 @@ export default function App() {
     setError(null)
   }
 
-  const downloadJSON = () => window.open('/api/download', '_blank')
+  const downloadJSON = () => window.open(`${API_BASE}/api/download`, '_blank')
 
   return (
     <div className="min-h-screen flex flex-col">
