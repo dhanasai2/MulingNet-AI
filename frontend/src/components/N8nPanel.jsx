@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import API_BASE from '../config'
 
 export default function N8nPanel({ summary }) {
   const [copied, setCopied] = useState(false)
@@ -6,7 +7,7 @@ export default function N8nPanel({ summary }) {
   const webhookUrl = 'https://your-instance.app.n8n.cloud/webhook/muling-detect'
 
   const downloadWorkflow = () => {
-    window.open('/n8n_workflow.json', '_blank')
+    window.open(`${API_BASE}/n8n_workflow.json`, '_blank')
   }
 
   const copyWebhook = () => {
@@ -60,7 +61,7 @@ export default function N8nPanel({ summary }) {
             <div>
               <h3 className="text-lg font-black text-white tracking-tight">n8n Cloud Integration</h3>
               <p className="text-sm text-gray-400 mt-0.5">
-                Automate fraud detection with <a href="https://n8n.io" target="_blank" rel="noopener" className="text-orange-400 hover:text-orange-300 underline underline-offset-2 font-semibold">n8n.io</a> — 
+                Automate fraud detection with <a href="https://n8n.io" target="_blank" rel="noopener" className="text-orange-400 hover:text-orange-300 underline underline-offset-2 font-semibold">n8n.io</a> —
                 no local install required
               </p>
             </div>
@@ -171,11 +172,10 @@ export default function N8nPanel({ summary }) {
             https://unheaved-elina-roughly.ngrok-free.dev/api/analyze
           </code>
           <button onClick={copyWebhook}
-            className={`shrink-0 px-3 py-2.5 rounded-lg text-xs font-bold border transition-all ${
-              copied
+            className={`shrink-0 px-3 py-2.5 rounded-lg text-xs font-bold border transition-all ${copied
                 ? 'bg-green-500/15 border-green-500/30 text-green-400'
                 : 'bg-dark-700 border-dark-500 text-gray-400 hover:text-white hover:border-accent-blue'
-            }`}>
+              }`}>
             <i className={`fas ${copied ? 'fa-check' : 'fa-copy'} mr-1`} />
             {copied ? 'Copied!' : 'Copy'}
           </button>
@@ -199,11 +199,11 @@ export default function N8nPanel({ summary }) {
 
 function PipelineNode({ icon, label, color, desc, small }) {
   const colors = {
-    green:  { bg: 'from-green-500/20 to-green-600/10', border: 'border-green-500/30', text: 'text-green-400' },
-    blue:   { bg: 'from-blue-500/20 to-blue-600/10',   border: 'border-blue-500/30',  text: 'text-blue-400' },
+    green: { bg: 'from-green-500/20 to-green-600/10', border: 'border-green-500/30', text: 'text-green-400' },
+    blue: { bg: 'from-blue-500/20 to-blue-600/10', border: 'border-blue-500/30', text: 'text-blue-400' },
     yellow: { bg: 'from-yellow-500/20 to-yellow-600/10', border: 'border-yellow-500/30', text: 'text-yellow-400' },
-    red:    { bg: 'from-red-500/20 to-red-600/10',     border: 'border-red-500/30',   text: 'text-red-400' },
-    gray:   { bg: 'from-gray-500/20 to-gray-600/10',   border: 'border-gray-500/30',  text: 'text-gray-400' },
+    red: { bg: 'from-red-500/20 to-red-600/10', border: 'border-red-500/30', text: 'text-red-400' },
+    gray: { bg: 'from-gray-500/20 to-gray-600/10', border: 'border-gray-500/30', text: 'text-gray-400' },
   }
   const c = colors[color] || colors.gray
 
