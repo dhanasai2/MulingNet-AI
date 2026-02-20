@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import API_BASE from '../config'
 
 export default function WhatIfSimulator({ graphData, accounts, rings }) {
   const [selectedNodes, setSelectedNodes] = useState(new Set())
@@ -33,7 +34,7 @@ export default function WhatIfSimulator({ graphData, accounts, rings }) {
     setError(null)
 
     try {
-      const resp = await fetch('/api/whatif', {
+      const resp = await fetch(`${API_BASE}/api/whatif`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nodes: [...selectedNodes] }),
@@ -109,34 +110,30 @@ export default function WhatIfSimulator({ graphData, accounts, rings }) {
               <button
                 key={acc.account_id}
                 onClick={() => toggleNode(acc.account_id)}
-                className={`relative px-3 py-2.5 rounded-xl text-left transition-all border group ${
-                  isSelected
+                className={`relative px-3 py-2.5 rounded-xl text-left transition-all border group ${isSelected
                     ? 'bg-red-500/10 border-red-500/40 shadow-lg shadow-red-500/10 scale-[0.98]'
                     : 'bg-dark-700 border-dark-500 hover:border-blue-500/30 hover:bg-dark-700/80'
-                }`}
+                  }`}
               >
                 {isSelected && (
                   <div className="absolute top-1.5 right-1.5">
                     <i className="fas fa-circle-xmark text-red-400 text-xs" />
                   </div>
                 )}
-                <span className={`text-[10px] font-mono font-bold block truncate ${
-                  isSelected ? 'text-red-400' : 'text-gray-300'
-                }`}>{acc.account_id}</span>
+                <span className={`text-[10px] font-mono font-bold block truncate ${isSelected ? 'text-red-400' : 'text-gray-300'
+                  }`}>{acc.account_id}</span>
                 <div className="flex items-center gap-1.5 mt-1">
                   <div className={`w-8 h-1.5 rounded-full overflow-hidden ${isSelected ? 'bg-red-800' : 'bg-dark-600'}`}>
                     <div
-                      className={`h-full rounded-full ${
-                        acc.suspicion_score >= 70 ? 'bg-red-500' :
-                        acc.suspicion_score >= 40 ? 'bg-orange-500' : 'bg-yellow-500'
-                      }`}
+                      className={`h-full rounded-full ${acc.suspicion_score >= 70 ? 'bg-red-500' :
+                          acc.suspicion_score >= 40 ? 'bg-orange-500' : 'bg-yellow-500'
+                        }`}
                       style={{ width: `${acc.suspicion_score}%` }}
                     />
                   </div>
-                  <span className={`text-[9px] font-bold ${
-                    acc.suspicion_score >= 70 ? 'text-red-400' :
-                    acc.suspicion_score >= 40 ? 'text-orange-400' : 'text-yellow-400'
-                  }`}>{acc.suspicion_score}</span>
+                  <span className={`text-[9px] font-bold ${acc.suspicion_score >= 70 ? 'text-red-400' :
+                      acc.suspicion_score >= 40 ? 'text-orange-400' : 'text-yellow-400'
+                    }`}>{acc.suspicion_score}</span>
                 </div>
               </button>
             )
@@ -193,11 +190,10 @@ function SimulationResults({ result }) {
         <div className="relative z-10 text-center">
           <span className="text-[10px] text-gray-500 uppercase tracking-wider block mb-2">Removal Effectiveness</span>
           <div className="inline-flex items-center gap-4">
-            <div className={`text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r ${
-              effectiveness_score.overall > 60 ? 'from-green-400 to-emerald-400' :
-              effectiveness_score.overall > 30 ? 'from-yellow-400 to-orange-400' :
-              'from-red-400 to-orange-400'
-            }`}>
+            <div className={`text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r ${effectiveness_score.overall > 60 ? 'from-green-400 to-emerald-400' :
+                effectiveness_score.overall > 30 ? 'from-yellow-400 to-orange-400' :
+                  'from-red-400 to-orange-400'
+              }`}>
               {effectiveness_score.grade}
             </div>
             <div className="text-left">
@@ -382,14 +378,12 @@ function DeltaCard({ label, delta }) {
     <div className="bg-dark-700/50 rounded-xl p-2.5">
       <span className="text-[9px] text-gray-500 uppercase block mb-1">{label}</span>
       <div className="flex items-center gap-1.5">
-        <span className={`text-xs font-bold ${
-          isNegative ? 'text-red-400' : isPositive ? 'text-green-400' : 'text-gray-400'
-        }`}>
+        <span className={`text-xs font-bold ${isNegative ? 'text-red-400' : isPositive ? 'text-green-400' : 'text-gray-400'
+          }`}>
           {isPositive ? '+' : ''}{typeof delta.change === 'number' && delta.change % 1 !== 0 ? delta.change.toFixed(4) : delta.change}
         </span>
-        <span className={`text-[9px] ${
-          isNegative ? 'text-red-400/60' : isPositive ? 'text-green-400/60' : 'text-gray-500'
-        }`}>
+        <span className={`text-[9px] ${isNegative ? 'text-red-400/60' : isPositive ? 'text-green-400/60' : 'text-gray-500'
+          }`}>
           ({delta.change_pct > 0 ? '+' : ''}{delta.change_pct}%)
         </span>
       </div>
