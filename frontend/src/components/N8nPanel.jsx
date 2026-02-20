@@ -10,7 +10,7 @@ export default function N8nPanel({ summary }) {
   }
 
   const copyWebhook = () => {
-    navigator.clipboard.writeText('https://muling-net-ai.vercel.app/api/webhook/n8n')
+    navigator.clipboard.writeText('https://unheaved-elina-roughly.ngrok-free.dev/api/webhook/n8n')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
